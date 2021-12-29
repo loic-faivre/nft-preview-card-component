@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+// Reset margin
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    background: hsl(217, 54%, 11%);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: hsl(216, 50%, 16%);
+        height: 500px;
+        width: 280px;
+        border-radius: 15px;
+        padding: 25px;
+        .sign {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: -30px;
+            display: flex;
+            justify-content: center;
+            a {
+                color: #fff;
+            &:hover {
+                color: hsl(178, 100%, 50%);
+            } 
+            }
+        }
+        .img {
+            width: 100%;
+            position: relative;
+            height: 280px;
+            .image {
+                width: 100%;
+                border-radius: 8px;
+            }
+            .overlay {
+                position: absolute;
+                cursor: pointer;
+                background: rgba(0, 255, 247, 0.5);
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                opacity: 0;
+                .view {
+                    opacity: 1;
+                    z-index: 10;
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .content {
+            margin-top: 24px;
+            .title {
+                color: white;
+                font-size: 22px;
+                line-height: 28px;
+                font-weight: 600;
+                cursor: pointer;
+                &:hover {
+                    color: hsl(178, 100%, 50%);
+                } 
+            }
+            p {
+                margin-top: 12px;
+                color: hsl(215, 51%, 70%);
+                font-weight: 300;
+                line-height: 26px;
+                font-size: 18px;
+            }
+            .info {
+                margin-top: 16px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 15px;
+                line-height: 18px;
+                .price, .time {
+                    img {
+                        margin-right: 7px;
+                    }
+                    display: flex;
+                    align-items: center;
+                }
+                .price {
+                    
+                    font-weight: 600;
+                    color: hsl(178, 100%, 50%);
+                }
+                .time {
+                    color: hsl(215, 51%, 70%);
+                }
+            }
+        }
+        .footer {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            color: hsl(215, 51%, 70%);
+            padding-top: 16px;
+            border-top: hsl(215, 32%, 27%) 1px solid;
+            span {
+                color: #fff;
+                margin-left: 5px;
+                cursor: pointer;
+                &:hover {
+                    color: hsl(178, 100%, 50%);
+                } 
+            }
+            .avatar {
+                height: 33px;
+                border-radius: 50%;
+                box-sizing: border-box;
+                border: 1px #fff solid ;
+                margin-right: 16px;
+            }
+        }
+    }
+}
